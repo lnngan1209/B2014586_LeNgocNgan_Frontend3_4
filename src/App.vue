@@ -1,15 +1,15 @@
 
 <template>
   <div id="app">
-    <AppHeader />
-
-    <div class="container mt-3">
-      <router-view />
+    <AppHeader/>
+    <div class="container-fluid mt-3">
+      <router-view/>
     </div>
   </div>
 </template>
 
 <script>
+import AppHeader from '../src/components/AppHeader.vue';
 export default {
   components: {
     AppHeader,
@@ -18,8 +18,5 @@ export default {
 </script>
 
 <style>
-  .page {
-    max-width: 400px;
-    margin: auto;
-  } 
+
 </style>

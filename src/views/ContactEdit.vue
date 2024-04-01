@@ -1,12 +1,14 @@
 <template>
-    <div v-if="contact" class="page">
-        <h4>Hiệu chỉnh Liên hệ</h4>
-        <ContactForm
-        :contact="contact"
-        @submit:contact="updateContact"
-        @delete:contact="deleteContact"
-    />
-        <p>{{ message }}</p>
+    <div class="container">
+        <div v-if="contact" class="page">
+            <h4>Hiệu chỉnh Liên hệ</h4>
+            <ContactForm
+            :contact="contact"
+            @submit:contact="updateContact"
+            @delete:contact="deleteContact"
+        />
+            <p>{{ message }}</p>
+        </div>
     </div>
 </template>
 
@@ -70,3 +72,15 @@ export default {
     },
 };
 </script>
+<style>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-group {
+    width: 300px;
+    margin-bottom: 20px; 
+} 
+
+</style>

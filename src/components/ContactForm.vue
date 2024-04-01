@@ -1,4 +1,5 @@
 <template>
+    <div class="container">
     <Form
         @submit="submitContact"
         :validation-schema="contactFormSchema"
@@ -68,6 +69,7 @@
             </button>
         </div>
     </Form>
+    </div>
 </template>
 
 <script>
@@ -104,8 +106,6 @@ export default {
             ),
     });
     return {
-        // Chúng ta sẽ không muốn hiệu chỉnh props, nên tạo biến cục bộ
-        // contactLocal để liên kết với các input trên form
         contactLocal: this.contact,
         contactFormSchema,
         };
@@ -122,5 +122,5 @@ export default {
 </script>
 
 <style scoped>
-@import "@/assets/form.css";
+@import "../assets/form.css";
 </style>

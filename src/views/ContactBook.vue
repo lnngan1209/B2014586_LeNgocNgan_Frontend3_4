@@ -1,4 +1,5 @@
 <template>
+    <div class="container">
     <div class="page row">
         <div class="col-md-10">
             <InputSearch v-model="searchText" />
@@ -48,10 +49,11 @@
                 <span class="mt-2 badge badge-warning">
                     <i class="fas fa-edit"></i> Hiệu chỉnh</span
                 >
-            </router-link>
+                </router-link>
             </div>
         </div>
     </div>
+</div>
 </template>
 
 <script>
@@ -85,7 +87,7 @@ export default {
             });
         },
         filteredContacts() {
-            if (!this.searchText) return this.contacts;
+            if (this.searchText == null) return this.contacts;
             return this.contacts.filter((_contact, index) =>
                 this.contactStrings[index].includes(this.searchText)
             );
@@ -137,4 +139,10 @@ export default {
         text-align: left;
         max-width: 750px;
     }
+    .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 </style>

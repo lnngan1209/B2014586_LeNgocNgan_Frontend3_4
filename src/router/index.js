@@ -18,6 +18,11 @@ const routes = [
         component: () => import("@/views/ContactEdit.vue"),
         props: true 
     },
+    {
+        path: "/contacts/new",
+        name: "contact.add",
+        component: () => import("@/views/ContactNew.vue"),
+    },
 ];
 
 const router = createRouter({
