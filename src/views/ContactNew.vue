@@ -9,7 +9,7 @@
 </template>
   
   <script>
-  import ContactForm from "@/components/ContactForm.vue"; // Đảm bảo đường dẫn đúng
+  import ContactForm from "@/components/ContactForm.vue";
   import ContactService from "@/services/contact.service";
   export default {
     components: {
